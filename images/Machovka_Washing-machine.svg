@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg2" viewBox="0 0 440.42 516.14" version="1.0">
+  <defs id="defs9275">
+    <linearGradient id="linearGradient8324" y2="846" gradientUnits="userSpaceOnUse" x2="483.5" y1="716.9" x1="377.17">
+      <stop id="stop11936" stop-color="#ddd6d6" offset="0"/>
+      <stop id="stop11938" stop-color="#ddd6d6" stop-opacity="0" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient8326" y2="315.46" gradientUnits="userSpaceOnUse" x2="442.72" y1="819.95" x1="529.11">
+      <stop id="stop11926" stop-color="#fff" offset="0"/>
+      <stop id="stop11928" stop-color="#705656" stop-opacity="0" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient8328" y2="198.97" gradientUnits="userSpaceOnUse" x2="85.279" y1="355.45" x1="673.75">
+      <stop id="stop11946" stop-color="#fff" offset="0"/>
+      <stop id="stop11948" stop-color="#ddd6d6" offset="1"/>
+    </linearGradient>
+  </defs>
+  <g id="layer1" transform="translate(-145.61 -337.11)">
+    <g id="g8314" stroke="#000" transform="translate(27.385 33.253)">
+      <rect id="rect9281" height="479.35" width="381.43" y="340.3" x="119.32" stroke-width=".7" fill="url(#linearGradient8324)"/>
+      <path id="rect10156" d="m500.45 340.25l57.33-36v481.35l-57.33 34v-479.35z" stroke-width=".7" fill="url(#linearGradient8326)"/>
+      <path id="rect10159" d="m174.86 304.21h383.44l-58 35.41-381.72 0.57 56.28-35.98z" stroke-width=".7" fill="url(#linearGradient8328)"/>
+      <path id="path10162" d="m-52.814 391.21a128.12 176.05 0 1 1 -256.25 0 128.12 176.05 0 1 1 256.25 0z" stroke-width=".80212" fill="#030000" transform="matrix(1 0 0 .76158 489.02 287.9)"/>
+      <path id="path11039" d="m-399.04 288.52a16.627 16.627 0 1 1 -33.25 0 16.627 16.627 0 1 1 33.25 0z" stroke-width="2.8247" fill="#030000" transform="matrix(.24790 0 0 .24772 585.44 288.59)"/>
+      <path id="path11045" d="m-399.04 288.52a16.627 16.627 0 1 1 -33.25 0 16.627 16.627 0 1 1 33.25 0z" stroke-width="2.8247" fill="#030000" transform="matrix(.24790 0 0 .24772 537.44 288.59)"/>
+      <path id="path11047" d="m-399.04 288.52a16.627 16.627 0 1 1 -33.25 0 16.627 16.627 0 1 1 33.25 0z" stroke-width="2.8247" fill="#030000" transform="matrix(.24790 0 0 .24772 561.44 288.59)"/>
+      <path id="path11049" d="m-52.814 391.21a128.12 176.05 0 1 1 -256.25 0 128.12 176.05 0 1 1 256.25 0z" stroke-width=".96314" fill="#aaa" transform="matrix(.85537 0 0 .61753 461.87 344.25)"/>
+    </g>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Washing-machine</dc:title>
+        <dc:date>2006-12-29T08:50:21</dc:date>
+        <dc:description>activity, clip art, clipart, electrical appliances, house, image, media, people, png, public domain, svg, tool, </dc:description>
+        <dc:source>http://openclipart.org/detail/2403/washing-machine-by-machovka</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Machovka</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>activity</rdf:li>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+            <rdf:li>electrical appliances</rdf:li>
+            <rdf:li>house</rdf:li>
+            <rdf:li>image</rdf:li>
+            <rdf:li>media</rdf:li>
+            <rdf:li>people</rdf:li>
+            <rdf:li>png</rdf:li>
+            <rdf:li>public domain</rdf:li>
+            <rdf:li>svg</rdf:li>
+            <rdf:li>tool</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

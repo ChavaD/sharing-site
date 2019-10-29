@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+    <!-- <script src="./scripts/script.js"></script> -->
+    <title>הרשמה לאתר הגמחים </title>
+    <link rel="stylesheet" type="text/css" href="styles/style for project registration form.css">
+
+    <!-- <title>Bootstrap Example</title> -->
+    <!-- <meta charset="utf-8"> -->
+    <!-- used to tell the browser to spread the page entirely, scale the screen to 1-->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+    <meta name="NetsparkQuiltingResult" total-length="7379" removed="0"
+        rules-found="w15143,w3622,w3055,w3036,w3843,w3844,w2233,w7424,w2309,w230" />
+</head>
+
+<body>
+    <div class=container>
+
+        <form action="/">
+            <!--back to home page-->
+
+
+            <div class="row">
+                <div class="col-xs-3"></div>
+                <div class="rowStyle col-xs-6" style="height:600px">
+                    <div class="row">
+                        <div class="h3"> הרשמה לאתר </div>
+                    </div>
+                    <div class="row">
+                        <div class="rowMust col-4 order-last"> (שדות חובה מסומנים בכוכבית *)</div>
+
+                    </div>
+                    <div class="row">
+                        <input type="text" class=" rowStyle col-6  " id="firstName" required>
+                        <label for="firstName">:שם</label>
+                    </div>
+                </div>
+                <div>
+                    <input type="text" class=" rowStyle col-6" id="lastName" required>
+                    <label for="lastName">: משפחה </label>
+                </div>
+                <div>
+                    <input type="text" id="mailAddress" required>
+                    <label for="mailAddress">: E-mail כתובת </label>
+                </div>
+                <div class="rowStyle col-4 order-last">
+                    <input type="password" id="password" required>
+                    <label for="password">:בחר סיסמא </label>
+                </div>
+
+                <div class="rowStyle">
+                    <input type="password" id="confirmPassword" required>
+                    <label for="confirmPassword">:אימות סיסמא </label>
+                </div>
+
+                <div class="rowpass"> ( סיסמא בת 6 תווים לפחות המכילה מספרים ו/או אותיות בלבד)</div>
+
+                <footer>
+                    <br>
+                    <input type="submit" value="הרשם" class="myButton" id="submitBtn">
+                </footer>
+            </div>
+            <div class="col-xs-4"></div>
+
+    </div>
+    </form>
+
+    </div>
+    <script>
+        // listen to click event of the submit button
+        $('#submitBtn').click(function (e) {
+            // make sure the form is not submitted
+            e.preventDefault();
+            // run the form validations
+            document.getElementById('myForm').checkValidity();
+            // check if the form is valid
+            if (document.getElementById('myForm').reportValidity()) {
+                // form is valid, create a post request
+                $.ajax({
+                    type: "post",
+                    url: "registration/register",
+                    // the user data 
+                    data: {
+                        userName: $('#userName').val(),
+                        password: $('#password').val()
+                    },
+                    complete: // this function will run if the request is successful
+                        function (xhr, status) {
+                            // check if there is an error
+                            if (status === 'error')
+                                alert(xhr.responseText);
+                            else
+                                alert('OK');
+                        }
+                });
+            }
+        });
+    </script>
+
+</body>

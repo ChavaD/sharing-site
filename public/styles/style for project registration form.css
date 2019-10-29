@@ -1,0 +1,106 @@
+.html * {
+    box-sizing: border-box;
+
+}
+
+.tableStyle {
+    /*padding: 20px;*/
+    margin: auto;
+    text-align: right;
+    color: rgb(51, 50, 50);
+    border-spacing: 10px;
+    font-size: 20px;
+    border: 2px solid rgb(88, 87, 87);
+    border-radius: 40px;
+    box-shadow: 8px 0px 8px rgba(43, 41, 41, 0.2);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+
+.h3 {
+    font-size: 40px;
+    padding-top: 150px;
+    text-align: center;
+    color: rgb(236, 120, 12);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.footer {
+    color: rgb(88, 87, 87);
+    font-weight: 900;
+    font-size: 15px;
+    border: 1px solid rgb(51, 50, 50);
+    border-radius: 15px;
+    padding: 15px;
+    background-color: rgb(253, 203, 155);
+    margin-right: 75px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.rowStyle {
+    font-size: 20px;
+    color: rgb(51, 49, 49);
+    background-color: rgb(253, 203, 155);
+    border: 1px solid rgb(88, 87, 87);
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+
+}
+
+.rowMust {
+    color: red;
+    font-size: 16px;
+    padding-left: 90px;
+}
+
+.rowpass {
+    color: rgb(51, 50, 50);
+    font-size: 16px;
+    padding-left: 90px;
+}
+
+.myButton {
+    -moz-box-shadow: 3px 4px 0px 0px #f89545;
+    -webkit-box-shadow: 3px 4px 0px 0px #f89545;
+    box-shadow: 3px 4px 0px 0px #f89545;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
+    background: -moz-linear-gradient(top, #f8902f 5%, #f89545 100%);
+    background: -webkit-linear-gradient(top, #f89545 5%, #f89545 100%);
+    background: -o-linear-gradient(top, #f89545 5%, #f89545 100%);
+    background: -ms-linear-gradient(top, #f89545 5%, #f89545 100%);
+    background: linear-gradient(to bottom, #f89545 5%, #f24437 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24437', GradientType=0);
+    background-color: #f89545;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    border-radius: 18px;
+    border: 1px solid #f59e3b;
+    display: inline-block;
+    cursor: pointer;
+    color: rgb(59, 55, 55);
+    font-family: Arial;
+    font-size: 17px;
+    padding: 7px 25px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #f8963a;
+}
+
+.myButton:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #c62d1f));
+    background: -moz-linear-gradient(top, #f24437 5%, #f89545 100%);
+    background: -webkit-linear-gradient(top, #f24437 5%, #f89545 100%);
+    background: -o-linear-gradient(top, #f24437 5%, #f89545 100%);
+    background: -ms-linear-gradient(top, #f24437 5%, #f89545 100%);
+    background: linear-gradient(to bottom, #f24437 5%, #f89545 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startCof89545lorstr='#f24437', endColorstr='#c62d1f', GradientType=0);
+    background-color: #fc7c27;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}

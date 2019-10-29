@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration</title>
+    <style>
+        .pageHeader {
+            background-color: lightgray;
+            border-bottom: 2px dashed black;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <a href="/">Back</a>
+    <header class="pageHeader">
+        <h2>User Registration</h2>
+    </header>
+    <form id="myForm">
+        <table>
+            <tr>
+                <td><label for="userName">User Name:</label> </td>
+                <td><input type="text" name="userName" id="userName" size="20" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" name="password" id="password" size="20" required />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Register" id="submitBtn" /></td>
+            </tr>
+
+        </table>
+    </form>
+
+    <script>
+        // listen to click event of the submit button
+        $('#submitBtn').click(function (e) {
+            // make sure the form is not submitted
+            e.preventDefault();
+            // run the form validations
+            document.getElementById('myForm').checkValidity();
+            // check if the form is valid
+            if (document.getElementById('myForm').reportValidity()) {
+                // form is valid, create a post request
+                $.ajax({
+                    type: "post",
+                    url: "registration/register",
+                    // the user data 
+                    data: {
+                        userName: $('#userName').val(),
+                        password: $('#password').val()
+                    },
+                    complete: // this function will run if the request is successful
+                        function (xhr, status) {
+                            // check if there is an error
+                            if (status === 'error')
+                                alert(xhr.responseText);
+                            else
+                                alert('OK');
+                        }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
