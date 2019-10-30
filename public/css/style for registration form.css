@@ -42,7 +42,7 @@
 .rowStyle {
     font-size: 20px;
     color: rgb(51, 49, 49);
-    background-color: rgb(253, 203, 155);
+    /* background-color: rgb(253, 203, 155); */
     border: 1px solid rgb(88, 87, 87);
     border-radius: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

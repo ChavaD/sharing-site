@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="he">
+
+
+<head>
+    <title>כניסה לאתר </title>
+    <link rel="shortcut icon" type="image/jpg" href="/PUBLIC/images/favicon.jpg" />
+    <link rel="stylesheet" type="text/css" href="CSS styles/style for loginpage.css">
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+<section id="signIn">
+    <a href="/"> X </a>
+    <form id="signInForm" name="myForm" method="post" action="https://www..co.il//" target="_parent" role="form">
+        <div id="content" role="main">
+            <div id="SignInMessege"></div>
+
+            <div id="signInFrame">
+                <div class="line signInTitle">כניסת משתמשים רשומים:</div>
+                <div class="line">
+                    <label for="Email" class="inputText">דואר אלקטרוני:</label>
+                    <input id="login_email" type="email" name="email" maxlength="40">
+                </div>
+                <div class="line">
+                    <label for="Password" class="inputText">סיסמה:</label>
+                    <input id="login_password" type="password" name="password" maxlength="20">
+                </div>
+                <div class="line submitLine">
+                    <input type="submit" class="button greenButton" id="submitBtn" value="כניסה למערכת" onclick="">
+                </div>
+                <input type="hidden" name="submitValue" value="continue">
+                <input type="hidden" name="return" value="https://www.co.il">
+
+                <button id=" signUpFrame" class="alert_yellow" onclick="parent.closeDialog('signUp')"
+                    title="!הירשם כאן">
+                    <h1>משתמש חדש?</h1>
+                    <div class=urlStyle>
+                        <a href="/PUBLIC/pages/registration.html">לחץ כאן להרשמה בחינם!</a>
+                    </div>
+                </button>
+            </div>
+    </form>
+</section>
+<script>
+    // listen to click event of the submit button
+    $('#submitBtn').click(function (e) {
+        // make sure the form is not submitted
+        e.preventDefault();
+        // run the form validations
+        document.getElementById('signInForm').checkValidity();
+        // check if the form is valid
+        if (document.getElementById('signInForm').reportValidity()) {
+            // form is valid, create a post request
+            $.ajax({
+                type: "post",
+                url: "registration/login",
+                // the user data 
+                data: {
+                    userName: $('#Email').val(),
+                    password: $('#Password').val()
+                },
+                complete: // this function will run if the request is successful
+                    function (xhr, status) {
+                        // check if there is an error
+                        if (status === 'error')
+                            alert(xhr.responseText);
+                        else
+                            alert('OK');
+                    }
+            });
+        }
+    });
+</script>
+
+</html>
