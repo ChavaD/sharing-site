@@ -14,7 +14,7 @@ app.use(express.json());
 app.get('/', (req, res) => res.sendFile('./public/pages/homepage.html', {
     root: __dirname
 }));
-app.get('/registration', (req, res) => res.sendFile('.public/pages/ Registration.html', {
+app.get('/registration', (req, res) => res.sendFile('./public/pages/ Registration.html', {
     root: __dirname
 }));
 app.get('/login', (req, res) => res.sendFile('./pages/loginpage.html', {
