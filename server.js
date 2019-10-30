@@ -1,7 +1,8 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const registration = require('./registration.js');
 const app = express();
-const port = 4242;
+const port = process.env.PORT || 80;
 
 app.use(express.static('public'));
 app.use(cookieParser());
