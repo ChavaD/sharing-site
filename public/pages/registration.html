@@ -7,16 +7,18 @@
 <head>
     <!-- <script src="./scripts/script.js"></script> -->
     <title>הרשמה לאתר </title>
-    <link rel="stylesheet" type="text/css" href="css/style for registration form.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <!-- <title>Bootstrap Example</title> -->
-    <!-- <meta charset="utf-8"> -->
-    <!-- used to tell the browser to spread the page entirely, scale the screen to 1-->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/style for registration form.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- <title>Bootstrap Example</title> -->
+    <meta charset="utf-8">
+    <!-- used to tell the browser to spread the page entirely, scale the screen to 1-->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
 
 
 
@@ -32,48 +34,51 @@
 
 
             <div class="row">
-                <div class="col-xs-3"></div>
-                <div class="rowStyle col-xs-6" style="height:600px">
-                    <div class="row">
-                        <div class="h3"> הרשמה לאתר </div>
-                    </div>
-                    <div class="row">
-                        <div class="rowMust col-4 order-last"> (שדות חובה מסומנים בכוכבית *)</div>
+                <div class="col-xs-6">
+                    <div class="rowStyle" style="height:600px">
+                        <div class="row">
+                            <div class="h3"> הרשמה לאתר </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4 order-last">
+                                <div class="rowMust col-4 order-last"> (שדות חובה מסומנים בכוכבית *)</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input type="text" class=" rowStyle col-6  " id="fullName" required>
+                            <label for="fullName" class="col-6">:שם מלא</label>
+                        </div>
 
-                    </div>
-                    <div class="row">
-                        <input type="text" class=" rowStyle col-6  " id="fullName" required>
-                        <label for="fullName">:שם מלא</label>
-                    </div>
+                        <div class="row">
+                            <input type="text" class=" rowStyle col-6" id="userName" required>
+                            <label for="userName">: שם משתמש </label>
+                        </div>
+                        <div class="row">
+                            <input type="text" class="rowStyle" id="email" required>
+                            <label for="mailAddress">: E-mail כתובת </label>
+                        </div>
+                        <div class="row">
 
-                    <div class="row">
-                        <input type="text" class=" rowStyle col-6" id="userName" required>
-                        <label for="userName">: שם משתמש </label>
-                    </div>
-                    <div class="row">
-                        <input type="text" class="rowStyle" id="email" required>
-                        <label for="mailAddress">: E-mail כתובת </label>
-                    </div>
-                    <div class="row">
-                        <label for="password">:בחר סיסמא </label>
+                            <input type="password" class="rowStyle" id="password" required></input>
 
-                        <input type="password" class="rowStyle" id="password" required>:בחר סיסמא </input>
-                    </div>
+                            <label for="password">:בחר סיסמא </label>
 
-                    <div class="row">
-                        <input type="password" class="rowStyle" id="confirmPassword" required>
-                        <label for="confirmPassword">:אימות סיסמא </label>
+                        </div>
+
+                        <div class="row">
+                            <input type="password" class="rowStyle" id="confirmPassword" required>
+                            <label for="confirmPassword">:אימות סיסמא </label>
+                        </div>
+                        <div class="row">
+                            <div class="rowpass"> ( סיסמא בת 6 תווים לפחות המכילה מספרים ו/או אותיות בלבד)</div>
+                        </div>
+                        <footer>
+                            <br>
+                            <input type="submit" value="הרשם" class="myButton" id="submitBtn">
+                        </footer>
                     </div>
-                    <div class="row">
-                        <div class="rowpass"> ( סיסמא בת 6 תווים לפחות המכילה מספרים ו/או אותיות בלבד)</div>
-                    </div>
-                    <footer>
-                        <br>
-                        <input type="submit" value="הרשם" class="myButton" id="submitBtn">
-                    </footer>
+                    <div class="col-xs-4"></div>
                 </div>
-                <div class="col-xs-4"></div>
-
             </div>
         </form>
 
