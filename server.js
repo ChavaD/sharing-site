@@ -3,6 +3,7 @@ const cookieParser = require('cookie-parser');
 const registration = require('./registration.js');
 const app = express();
 const port = process.env.PORT || 80;
+const test = require('./test');
 
 app.use(express.static('public'));
 app.use(cookieParser());
@@ -24,6 +25,10 @@ app.get('/about', (req, res) => res.sendFile('./pages/about.html', {
     root: __dirname
 }));
 
+app.get('/test', (req, res) => {
+    return test(req, res);
+});
+
 
 app.post('/registration/register', (req, res) => {
     return registration.register(req, res);
@@ -31,5 +36,6 @@ app.post('/registration/register', (req, res) => {
 app.post('/registration/login', (req, res) => {
     return registration.login(req, res);
 });
+
 
 app.listen(port, () => console.log('Example app listening on port ' + port));

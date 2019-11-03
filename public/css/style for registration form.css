@@ -41,12 +41,18 @@
     font-size: 20px;
     color: rgb(51, 49, 49);
     /* background-color: rgb(253, 203, 155); */
-    border: 1px solid rgb(88, 87, 87);
+    border: 1px solid rgb(126, 124, 124);
     border-radius: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 
+}
 
+.bigRow {
+    padding-top: 150px;
+    /* background-color: rgb(253, 203, 155); */
+    border: 1px solid rgb(240, 183, 99);
+    border-radius: 10px;
 }
 
 .rowMust {
