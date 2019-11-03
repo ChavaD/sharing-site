@@ -46,7 +46,7 @@
                         <a onclick="myFunction1()">כלות</a>
                         <a onclick="myFunction2()">בר מצווה</a>
                         <a onclick="myFunction3()">בת מצווה</a>
-                        <a onclick="myFunction4()">ברית\ה</a>
+                        <a onclick="myFunction4()">ברית</a>
                         <a onclick="myFunction5()">אירוסין</a>
 
 
@@ -90,7 +90,7 @@
 
                 <div class="dropdown">
                     <button onclick="myFunction18()" class="dropbtn">רפואה</button>
-                    <div id="myDropdown12" class="dropdown-content">
+                    <div id="myDropdown18" class="dropdown-content">
                         <a onclick="myFunction19()">ברנשילד </a>
                         <a onclick="myFunction20()">יעוץ רפואי </a>
                         <a onclick="myFunction21()">מכשור רפואי </a>
@@ -104,7 +104,7 @@
 
                 <div class="dropdown">
                     <button onclick="myFunction24()" class="dropbtn">קדושה</button>
-                    <div id="myDropdown12" class="dropdown-content">
+                    <div id="myDropdown24" class="dropdown-content">
                         <a onclick="myFunction25()">ספרי קודש </a>
                         <a onclick="myFunction26()">ספרים לברית יצחק </a>
                         <a onclick="myFunction27()">שבת </a>
@@ -121,7 +121,7 @@
 
                 <div class="dropdown">
                     <button onclick="myFunction29()" class="dropbtn">שונות</button>
-                    <div id="myDropdown12" class="dropdown-content">
+                    <div id="myDropdown29" class="dropdown-content">
                         <a onclick="myFunction30()">בגדים </a>
                         <a onclick="myFunction31()">כסאות ספספלים שולחנות </a>
                         <a onclick="myFunction32()">במות </a>
@@ -137,37 +137,6 @@
                     </div>
                 </div>
             </b>
-            <!-- &nbsp;
-            &nbsp;
-            <span class="stripe"> </span>
-            &nbsp;
-            &nbsp; -->
-            <!-- <a href="registration.asp">נשים ויולדות</a></li>
-            &nbsp;
-            &nbsp;
-            <span class="stripe"> </span> -->
-            <!-- &nbsp;
-            &nbsp;
-            <a href="BoardForDelivery.asp">תינוקות</a></li>
-            &nbsp; -->
-            <!-- &nbsp;
-            <span class="stripe"> </span>
-            &nbsp;
-            &nbsp; -->
-            <!-- <a href="listGMACH.asp">רפואה</a></li>
-            &nbsp;
-            &nbsp; -->
-            <!-- <span class="stripe"> </span>
-            &nbsp;
-            &nbsp; -->
-            <!-- <a href="contact.asp">קדושה </a></li>
-            &nbsp;
-            &nbsp; -->
-            <!-- <span class="stripe"> </span>
-            &nbsp;
-            &nbsp; -->
-            <!-- <a href="contact.asp"> שונות</a></li>
-            </b> -->
 
         </div>
         <br>
@@ -182,23 +151,23 @@
         <p id="mita " style="text-Align:Center"></p>
         <p id="britmila " style="text-Align:Center"></p>
         <p id="tomechet " style="text-Align:Center"></p>
-        <p id="tinokot" style="text-Align:center"></p>
+        <!-- <p id="tinokot" style="text-Align:center"></p> -->
         <p id="chalav" style="text-align:center"></p>
         <p id="titulim" style="text-align:center"></p>
         <p id="cise" style="text-align:center"></p>
         <p id="muzarim" style="text-align:center"></p>
         <p id="babysiter" style="text-align:center"></p>
-        <p id="refua " style="text-Align:center"></p>
+        <!-- <p id="refua " style="text-Align:center"></p> -->
         <p id="brenshild " style="text-Align:Center"></p>
         <p id="yeuz " style="text-Align:Center"></p>
         <p id="michshur " style="text-Align:Center"></p>
         <p id="trufot " style="text-Align:Center"></p>
-        <p id="kdusha" style="text-Align:center"></p>
+        <!-- <p id="kdusha" style="text-Align:center"></p> -->
         <p id="sfarim" style="text-align:center"></p>
         <p id="britizchak" style="text-align:center"></p>
         <p id="shabat" style="text-align:center"></p>
         <p id="avelut" style="text-align:center"></p>
-        <p id="shonot" style="text-align:center"></p>
+        <!-- <p id="shonot" style="text-align:center"></p> -->
         <p id="bgadim " style="text-Align:center"></p>
         <p id="safsalim " style="text-Align:Center"></p>
         <p id="bamot " style="text-Align:Center"></p>
@@ -236,6 +205,23 @@
         function myFunction6() {
             document.getElementById("myDropdown6").classList.toggle("show");
         }
+
+        function myFunction12() {
+            document.getElementById("myDropdown12").classList.toggle("show");
+        }
+
+        function myFunction18() {
+            document.getElementById("myDropdown18").classList.toggle("show");
+        }
+
+        function myFunction24() {
+            document.getElementById("myDropdown24").classList.toggle("show");
+        }
+
+        function myFunction29() {
+            document.getElementById("myDropdown29").classList.toggle("show");
+        }
+
 
         // Close the dropdown menu if the user clicks outside of it
         window.onclick = function (event) {
@@ -293,16 +279,17 @@
             document.getElementById("tomechet").innerHTML = "תומכת לידה"
         }
 
-        function myFunction12() {
-            document.getElementById('tinokot').innerHTML = " תינוקות "
-        }
+        // function myFunction12() {
+        //     document.getElementById('tinokot').innerHTML = " תינוקות asdasdasds"
+
 
         function myFunction13() {
-            document.getElementById('chalav').innerHTML =" תינוקות "
+            document.getElementById('chalav').innerHTML = " תינוקות "
 
         }
+
         function myFunction14() {
-            document.getElementById('titulim').innerHTML =" תינוקות "
+            document.getElementById('titulim').innerHTML = " תינוקות "
 
         }
 
@@ -318,9 +305,9 @@
             document.getElementById("babysiter").innerHTML = "מזל טוב להולדת הילד/ה"
         }
 
-        function myFunction18() {
-            document.getElementById("refua").innerHTML = "מזל טוב לרגל האירוסין"
-        }
+        // function myFunction18() {
+        //     document.getElementById("refua").innerHTML = "מזל טוב לרגל האירוסין"
+        // }
 
         function myFunction19() {
             document.getElementById(" brenshild").innerHTML = "מזל טוב להולדת הילד"
@@ -339,9 +326,9 @@
             document.getElementById("trufot").innerHTML = "ברית מילה "
         }
 
-        function myFunction24() {
-            document.getElementById("kdusha").innerHTML = "תומכת לידה"
-        }
+        // function myFunction24() {
+        //     document.getElementById("kdusha").innerHTML = "תומכת לידה"
+        // }
 
         function myFunction25() {
             document.getElementById('sfarim').innerHTML = " תינוקות "
@@ -360,9 +347,9 @@
             document.getElementById("avelut").innerHTML = "מזל טוב לכלת בת המצווה"
         }
 
-        function myFunction29() {
-            document.getElementById("shonot").innerHTML = "מזל טוב להולדת הילד/ה"
-        }
+        // function myFunction29() {
+        //     document.getElementById("shonot").innerHTML = "מזל טוב להולדת הילד/ה"
+        // }
 
         function myFunction30() {
             document.getElementById("bgadim").innerHTML = "מזל טוב לרגל האירוסין"
@@ -388,7 +375,6 @@
         function myFunction35() {
             document.getElementById("cleyavoda").innerHTML = "תומכת לידה"
         }
-
     </script>
 </body>
 
