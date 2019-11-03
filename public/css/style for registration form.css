@@ -3,23 +3,11 @@
 
 }
 
-/* .tableStyle { */
-/*padding: 20px;*/
-/* margin: auto;
-    text-align: right;
-    color: rgb(51, 50, 50);
-    border-spacing: 10px;
-    font-size: 20px;
-    border: 2px solid rgb(88, 87, 87);
-    border-radius: 40px;
-    box-shadow: 8px 0px 8px rgba(43, 41, 41, 0.2); */
-/* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-/* } */
-
 .h3 {
-    font-size: 40px;
-    padding-top: 150px;
-    text-align: center;
+    font-size: 45px;
+    padding-top: 40px;
+    text-align: right;
+    ;
     color: rgb(236, 120, 12);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -38,35 +26,61 @@
 }
 
 .rowStyle {
-    font-size: 20px;
+    font-size: 16px;
     color: rgb(51, 49, 49);
     /* background-color: rgb(253, 203, 155); */
     border: 1px solid rgb(126, 124, 124);
     border-radius: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: right;
+    height: 30px;
+    padding-top: 10px;
 
+}
+
+.rowline {
+    font-size: 16px;
+    color: rgb(51, 49, 49);
+    text-align: right;
+    height: 40px;
+    padding-top: 10px;
 
 }
 
 .bigRow {
-    padding-top: 150px;
-    /* background-color: rgb(253, 203, 155); */
-    border: 1px solid rgb(240, 183, 99);
+    border: 1px solid rgb(88, 87, 87);
     border-radius: 10px;
+    height: 600px;
+    padding-top: 10px;
 }
 
 .rowMust {
-    color: red;
-    font-size: 16px;
+    color: rgb(247, 103, 8);
+    font-size: 13px;
     padding-left: 90px;
     text-align: right;
+    padding-top: 10px;
 }
 
 .rowpass {
     color: rgb(51, 50, 50);
-    font-size: 16px;
+    font-size: 14px;
     padding-left: 90px;
     text-align: right;
+    padding-top: 10px;
+}
+
+.box {
+    font-size: 16px;
+    color: rgb(223, 19, 19);
+    text-align: right;
+    height: 30px;
+    padding-top: 10px;
+}
+
+.required {
+    color: rgb(247, 103, 8);
+    padding-top: 10px;
 }
 
 .myButton {
@@ -109,4 +123,5 @@
 .myButton:active {
     position: relative;
     top: 1px;
+
 }

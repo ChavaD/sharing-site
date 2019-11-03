@@ -6,8 +6,7 @@
 
 <head>
     <!-- <script src="./scripts/script.js"></script> -->
-    <title>הרשמה לאתר אפרסק </title>
-    <link rel="shortcut icon" type="image/ico" href="public/images/favicon.ico" />
+    <title>הרשמה לאתר </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -30,92 +29,113 @@
 <body>
     <div class=container>
 
-        <form id="myForm">
-            <!--back to home page-->
+        <div class="row">
+            <div class="col-xs-3 "></div>
+            <div class=" bigRow col-xs-6 ">
+
+                <form id="myForm">
+
+                    <div class="h3 col-xs-12"> הרשמה לאתר </div>
+
+                    <div class="rowMust col-xs-12"> (שדות חובה מסומנים בכוכבית *)</div>
 
 
-            <div class="row">
-                <div class="col-xs-6">
-                    <div class="bigRow" style="height:600px">
-                        <div class="row">
-                            <div class="h3"> הרשמה לאתר </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-4 order-last">
-                                <div class="rowMust col-4 order-last"> (שדות חובה מסומנים בכוכבית *)</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <input type="text" class=" rowStyle col-6  " id="fullName" required>
-                            <label for="fullName" class="col-6">:שם מלא</label>
-                        </div>
+                    <input type="text" class=" rowStyle col-xs-5 " id="fullName" required>
 
-                        <div class="row">
-                            <input type="text" class=" rowStyle col-6" id="userName" required>
-                            <label for="userName">: שם משתמש </label>
-                        </div>
-                        <div class="row">
-                            <input type="text" class="rowStyle" id="email" required>
-                            <label for="mailAddress">: E-mail כתובת </label>
-                        </div>
-                        <div class="row">
+                    <label for="fullName" class="rowline col-xs-5 ">:שם מלא</label>
 
-                            <input type="password" class="rowStyle" id="password" required></input>
+                    <span class="required col-xs-1">*</span>
 
-                            <label for="password">:בחר סיסמא </label>
 
-                        </div>
 
-                        <div class="row">
-                            <input type="password" class="rowStyle" id="confirmPassword" required>
-                            <label for="confirmPassword">:אימות סיסמא </label>
-                        </div>
-                        <div class="row">
-                            <div class="rowpass"> ( סיסמא בת 6 תווים לפחות המכילה מספרים ו/או אותיות בלבד)</div>
-                        </div>
-                        <footer>
-                            <br>
-                            <input type="submit" value="הרשם" class="myButton" id="submitBtn">
-                        </footer>
-                    </div>
-                    <div class="col-xs-4"></div>
-                </div>
+                    <input type="text" class=" rowStyle col-xs-5 " id="userName" required>
+
+                    <label for="userName" class="rowline col-xs-5 ">: שם משתמש </label>
+
+                    <span class="required col-xs-1">*</span>
+
+
+
+                    <input type="text" class="rowStyle col-xs-5" id="email" required>
+
+                    <label for="mailAddress" class="rowline col-xs-5 ">: E-mail כתובת </label>
+
+                    <span class="required col-xs-1 ">*</span>
+
+
+
+                    <input type="password" class="rowStyle col-xs-5" id="password" required></input>
+
+                    <label for="password" class="rowline col-xs-5 ">:בחר סיסמא </label>
+
+                    <span class="required col-xs-1 ">*</span>
+
+
+
+                    <input type="password" class="rowStyle col-xs-5" id="confirmPassword" required>
+
+                    <label for="confirmPassword" class="rowline col-xs-5 ">:אימות סיסמא </label>
+
+                    <span class="required col-xs-1 ">*</span>
+
+
+
+                    <div class="rowpass col-xs-12"> ( סיסמא בת 6 תווים לפחות המכילה מספרים ו/או אותיות בלבד)</div>
+
+
+
+                    <label for="agreementChk" class="rowline col-xs-10 " id="agreement"
+                        class="checkBoxText verticalCenter touchWideLabel">
+                        קראתי את
+                        <a href="text.asp?textId=5" target="_blank" title="לחצו כדי לקרוא את התקנון">תקנון האתר</a>
+                        , ואני מסכים/ה עם כל האמור בו, כולל קבלת דיוור אותו אוכל להפסיק בכל עת.
+
+                    </label>
+                    <input type="checkbox" class="box col-xs-1 " id="agreementChk" name="agreement">
+                    <span class="required col-xs-1 ">*</span>
+
+
+                    <input type="submit" value="הרשם" class="myButton col-xs-3" id="submitBtn">
+
+                </form>
+                <div class="col-xs-3" style="height:600px"> </div>
+>>>>>>> 9a7348841d642ef40debb37e6f730c75cc5459b8
             </div>
-        </form>
+        </div>
 
-    </div>
-    <script>
-        // listen to click event of the submit button
-        $('#submitBtn').click(function (e) {
-            // make sure the form is not submitted
-            e.preventDefault();
-            // run the form validations
-            document.getElementById('myForm').checkValidity();
-            // check if the form is valid
-            if (document.getElementById('myForm').reportValidity()) {
-                // form is valid, create a post request
-                $.ajax({
-                    type: "post",
-                    url: "registration/register",
-                    // the user data 
-                    data: {
-                        fullName: $('#fullName').val(),
-                        userName: $('#userName').val(),
-                        email: $('#email').val(),
-                        password: $('#password').val(),
-                        confirmPassword: $('#confirmPassword').val()
-                    },
-                    complete: // this function will run if the request is successful
-                        function (xhr, status) {
-                            // check if there is an error
-                            if (status === 'error')
-                                alert(xhr.responseText);
-                            else
-                                alert(xhr.responseText);
-                        }
-                });
-            }
-        });
-    </script>
+
+        <script>
+            // listen to click event of the submit button
+            $('#submitBtn').click(function (e) {
+                // make sure the form is not submitted
+                e.preventDefault();
+                // run the form validations
+                document.getElementById('myForm').checkValidity();
+                // check if the form is valid
+                if (document.getElementById('myForm').reportValidity()) {
+                    // form is valid, create a post request
+                    $.ajax({
+                        type: "post",
+                        url: "registration/register",
+                        // the user data 
+                        data: {
+                            fullName: $('#fullName').val(),
+                            userName: $('#userName').val(),
+                            email: $('#email').val(),
+                            password: $('#password').val(),
+                            confirmPassword: $('#confirmPassword').val()
+                        },
+                        complete: // this function will run if the request is successful
+                            function (xhr, status) {
+                                // check if there is an error
+                                if (status === 'error')
+                                    alert(xhr.responseText);
+                                else
+                                    alert(xhr.responseText);
+                            }
+                    });
+                }
+            });
+        </script>
 
 </body>
