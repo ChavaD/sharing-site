@@ -12,7 +12,6 @@ mysql.createPool({
 
 }).then((c) => {
     db = c;
-    db.query("select * from usersname")
 }).catch((e) => {
     console.error(e);
 });
