@@ -2,10 +2,10 @@ require('dotenv').config();
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const registration = require('./registration.js');
+const login = require('./login.js');
 const app = express();
-const mysql = require('./mysql.js');
 const port = process.env.PORT || 80;
-
+const bodyParser = require('body-parser');
 
 app.set('view engine', 'ejs');
 
@@ -15,6 +15,8 @@ app.use(cookieParser());
 app.use(express.urlencoded());
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json());
+app.use(bodyParser.json());
+
 
 app.get('/', (req, res) => res.sendFile('./public/pages/homepage.html', {
     root: __dirname
@@ -28,25 +30,15 @@ app.get('/login', (req, res) => res.sendFile('./pages/loginpage.html', {
 app.get('/about', (req, res) => res.sendFile('./pages/about.html', {
     root: __dirname
 }));
-// let user = ['chava', 'adva'];
-// app.get('/userInfo/:id', (req, res) => {
-//     console.log('req.params.id');
-//     res.render('pages/userInfo', {
-//         users: user[req.params.id],
-//         id: req.params.id
-//     });
-// });
 
-app.get('/mysql', async function (req, res) {
-    let data = await mysql();
-    res.send(data);
-});
 
 app.post('/registration/register', (req, res) => {
-    return registration.register(req, res);
+    let result = await registration.register(req, res);
+    res.send(result);
 });
-app.post('/registration/login', (req, res) => {
-    return registration.login(req, res);
+app.post('/loginpage/login', (req, res) => {
+    let result1 = await login.login(req, res);
+    res.send(result1);
 });
 
 app.listen(port, () => console.log('Example app listening on port ' + port));
