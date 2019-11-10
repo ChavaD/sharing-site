@@ -16,15 +16,15 @@
         <div id="content" role="main">
             <div id="SignInMessege"></div>
 
-            <div id="signInFrame">
+            <div id="signInFrom">
                 <div class="line signInTitle">כניסת משתמשים רשומים:</div>
                 <div class="line">
-                    <label for="Email" class="inputText">דואר אלקטרוני:</label>
-                    <input id="login_email" type="email" name="email" maxlength="40">
+                    <label for="email" class="inputText">דואר אלקטרוני:</label>
+                    <input id="email" type="email" name="email" maxlength="40">
                 </div>
                 <div class="line">
-                    <label for="Password" class="inputText">סיסמה:</label>
-                    <input id="login_password" type="password" name="password" maxlength="20">
+                    <label for="passWord" class="inputText">סיסמה:</label>
+                    <input id="passWord" type="password" name="passWord" maxlength="20">
                 </div>
                 <div class="line submitLine">
                     <input type="submit" class="button greenButton" id="submitBtn" value="כניסה למערכת" onclick="">
@@ -53,20 +53,22 @@
         if (document.getElementById('signInForm').reportValidity()) {
             // form is valid, create a post request
             $.ajax({
-                type: "post",
-                url: "registration/login",
+                type: 'post',
+                url: "/loginpage/login",
                 // the user data 
                 data: {
-                    userName: $('#Email').val(),
-                    password: $('#Password').val()
+                    email: $('#email').val(),
+                    passWord: $('#passWord').val()
                 },
                 complete: // this function will run if the request is successful
                     function (xhr, status) {
                         // check if there is an error
-                        if (status === 'error')
+                        if (status === 'error'){
                             alert(xhr.responseText);
+                         }
                         else
-                            alert('OK');
+                            alert(xhr.responseText);
+                    
                     }
             });
         }
