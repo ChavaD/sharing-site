@@ -32,13 +32,13 @@ app.get('/about', (req, res) => res.sendFile('./pages/about.html', {
 }));
 
 
-app.post('/registration/register', (req, res) => {
+app.post('/registration/register', async function (req, res) {
     let result = await registration.register(req, res);
     res.send(result);
 });
-app.post('/loginpage/login', (req, res) => {
-    let result1 = await login.login(req, res);
-    res.send(result1);
+app.post('/loginpage/login', async function (req, res) {
+    let result = await login.login(req, res);
+    res.send(result);
 });
 
 app.listen(port, () => console.log('Example app listening on port ' + port));
