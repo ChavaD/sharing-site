@@ -1,35 +1,56 @@
+// const test = require('./test1.js')
+
 module.exports = {
     register,
-    login
+    // login,
+    getUsers
 };
 
-let users = [];
+const mysql = require('promise-mysql');
 
-function register(req, res) {
+let db;
+mysql.createPool({
+    connectionLimit: 100,
+    host: process.env.MYSQL_URL,
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DB
+
+}).then((c) => {
+    db = c;
+}).catch((e) => {
+    console.error(e);
+});
+console.log('check2');
+
+async function register(req, res) {
+    console.log('check2');
+
+    let users = await getUsers();
+
     let userName = req.body.userName;
     let fullName = req.body.fullName;
     let email = req.body.email;
     let passWord = req.body.passWord;
-    let confirmPassword = req.body.confirmPassword;
+    let confirmPassWord = req.body.confirmPassWord;
 
     for (let u of users) {
-
         if (userName === u.userName && passWord === u.passWord) {
-            res.status(500);
-
-            res.send('משתמש קיים!!');
+            // return 'משתמש קיים!!';
+            return res.sendStatus(500);
         }
     }
-    let user = {
-        userName,
-        fullName,
-        passWord,
-        email,
-        confirmPassword
-    };
+    await db.query(`INSERT INTO users(userName,fullName,email,passWord) VALUES("${userName}","${fullName}","${email}","${passWord}")`);
+    res.send("נרשמת בהצלחה");
 
-    users.push(user);
-    res.send("נרשמת בהצלחה")
+
+
+};
+
+
+
+async function getUsers() {
+
+    let data = await db.query("select * from users");
+    return data;
 }
-
-function login(req, res) {}
