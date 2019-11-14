@@ -35,7 +35,6 @@ async function register(req, res) {
     }
     for (let u of users) {
         if (name === u.name && passWord === u.passWord && email === u.email) {
-            // return 'משתמש קיים!!';
             return res.sendStatus(500);
         }
     }
