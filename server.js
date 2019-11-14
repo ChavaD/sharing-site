@@ -6,6 +6,11 @@ const login = require('./login.js');
 const app = express();
 const port = process.env.PORT || 80;
 const bodyParser = require('body-parser');
+const multer = require('multer');
+const multerUupload = multer({
+    dest: __dirname + '/images'
+});
+const upload = require('./upload.js');
 
 app.set('view engine', 'ejs');
 
@@ -38,6 +43,10 @@ app.post('/registration/register', async function (req, res) {
 });
 app.post('/loginpage/login', async function (req, res) {
     let result = await login.login(req, res);
+    res.send(result);
+});
+app.post('/forDelivery/upload', multerUupload.single('image'), async function (req, res) {
+    let result = await upload.upload(req, res);
     res.send(result);
 });
 
