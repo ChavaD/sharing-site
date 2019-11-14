@@ -28,19 +28,20 @@ async function register(req, res) {
 
     let users = await getUsers();
 
-    let userName = req.body.userName;
-    let fullName = req.body.fullName;
+    let name = req.body.name;
     let email = req.body.email;
     let passWord = req.body.passWord;
     let confirmPassWord = req.body.confirmPassWord;
-
+    if (passWord !== confirmPassWord) {
+        return res.send("הסיסמא אינה תואמת")
+    }
     for (let u of users) {
-        if (userName === u.userName && passWord === u.passWord) {
+        if (name === u.name && passWord === u.passWord) {
             // return 'משתמש קיים!!';
             return res.sendStatus(500);
         }
     }
-    await db.query(`INSERT INTO users(userName,fullName,email,passWord) VALUES("${userName}","${fullName}","${email}","${passWord}")`);
+    await db.query(`INSERT INTO usersname(name,email,passWord) VALUES("${name}","${email}","${passWord}")`);
     res.send("נרשמת בהצלחה");
 
 
@@ -51,6 +52,6 @@ async function register(req, res) {
 
 async function getUsers() {
 
-    let data = await db.query("select * from users");
+    let data = await db.query("select * from usersname");
     return data;
 }

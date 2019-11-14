@@ -40,16 +40,10 @@
                     <div class="rowMust col-xs-12"> (שדות חובה מסומנים בכוכבית *)</div>
 
 
-                    <input type="text" class=" rowStyle col-xs-6 " id="userName" required>
 
-                    <label for="userName" class="rowline col-xs-5 ">:שם משתמש</label>
+                    <input type="text" class=" rowStyle col-xs-6 " id="name" required>
 
-                    <span class="required col-xs-1">*</span>
-
-
-                    <input type="text" class=" rowStyle col-xs-6 " id="fullName" required>
-
-                    <label for="fullName" class="rowline col-xs-5 ">: שם מלא </label>
+                    <label for="name" class="rowline col-xs-5 ">: שם מלא </label>
 
                     <span class="required col-xs-1">*</span>
 
@@ -118,9 +112,7 @@
                         url: '/registration/register',
                         // the user data 
                         data: {
-                            userName: $('#userName').val(),
-
-                            fullName: $('#fullName').val(),
+                            name: $('#name').val(),
                             email: $('#email').val(),
                             passWord: $('#passWord').val(),
                             confirmPassWord: $('#confirmPassWord').val()
