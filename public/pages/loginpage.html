@@ -2,77 +2,111 @@
 <html lang="he">
 
 
+
+
 <head>
-    <title>כניסה לאתר אפרסק </title>
-    <link rel="shortcut icon" type="image/ico" href="public/images/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="CSS styles/style for loginpage.css">
-    <meta charset="utf-8">
+    <!-- <script src="./scripts/script.js"></script> -->
+    <title>כניסה לאתר </title>
+    <link rel="shortcut icon" type="image/ico" href="public/images/peach.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/style for registration and login pages.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- <title>Bootstrap Example</title> -->
+    <meta charset="utf-8">
+    <!-- used to tell the browser to spread the page entirely, scale the screen to 1-->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+
+
+
+    <meta name="NetsparkQuiltingResult" total-length="7379" removed="0"
+        rules-found="w15143,w3622,w3055,w3036,w3843,w3844,w2233,w7424,w2309,w230" />
 </head>
-<section id="signIn">
-    <a href="/"> X </a>
-    <form id="signInForm" name="myForm" method="post" action="https://www..co.il//" target="_parent" role="form">
-        <div id="content" role="main">
-            <div id="SignInMessege"></div>
 
-            <div id="signInFrom">
-                <div class="line signInTitle">כניסת משתמשים רשומים:</div>
-                <div class="line">
-                    <label for="email" class="inputText">דואר אלקטרוני:</label>
-                    <input id="email" type="email" name="email" maxlength="40">
-                </div>
-                <div class="line">
-                    <label for="passWord" class="inputText">סיסמה:</label>
-                    <input id="passWord" type="password" name="passWord" maxlength="20">
-                </div>
-                <div class="line submitLine">
-                    <input type="submit" class="button greenButton" id="submitBtn" value="כניסה למערכת" onclick="">
-                </div>
-                <input type="hidden" name="submitValue" value="continue">
-                <input type="hidden" name="return" value="https://www.co.il">
+<body>
+    <div class=container>
 
-                <button id=" signUpFrame" class="alert_yellow" onclick="parent.closeDialog('signUp')"
-                    title="!הירשם כאן">
-                    <h1>משתמש חדש?</h1>
-                    <div class=urlStyle>
-                        <a href="/pages/registration.html">לחץ כאן להרשמה בחינם!</a>
+        <div class="row">
+            <div class="col-xs-3 "></div>
+            <a href="/" class="x col-xs-1"> X </a>
+
+            <div class=" bigRow col-xs-6 ">
+
+
+                <form id="myForm">
+
+                    <div class="firstLine col-xs-12">:כניסת משתמשים רשומים</div>
+                    <!-- <div class="line"> -->
+
+                    <input id="login_email" class="loginRow col-xs-6" type="email" name="email" maxlength="40">
+
+                    <label for="Email" class="rowline col-xs-6">:דואר אלקטרוני</label>
+
+                    <!-- </div> -->
+                    <!-- <div class="line"> -->
+                    <input id="login_password" class="loginRow col-xs-6" type="password" name="password" maxlength="20">
+
+                    <label for="Password" class="rowline col-xs-6">:סיסמה</label>
+
+                    <!-- <div> -->
+                    <input type="submit" class="myButton col-xs-3" id="submitBtn" value="כניסה למערכת" onclick="">
+                    <!-- </div> -->
+                    <!-- </div> -->
+                    <!-- <div class="line submitLine"> -->
+
+                    <!-- </div> -->
+                    <h3 class="newUser col-xs-12">?משתמש חדש</h3>
+
+                    <input type="hidden" class="loginbutton" name="submitValue" value="continue">
+                    <input type="hidden" class="loginbutton" name="return" value="https://www.co.il">
+                    <div>
+                        <button id=" signUpFrame" class="loginbutton col-xs-12" onclick="parent.closeDialog('signUp')"
+                            title="!הירשם כאן">
+
+                            <a href="/pages/registration.html" class="reg col-xs-9 ">!לחץ כאן להרשמה בחינם</a>
+
+                        </button>
                     </div>
-                </button>
+
             </div>
+            <div class="col-xs-3 "></div>
+        </div>
+    </div>
     </form>
-</section>
-<script>
-    // listen to click event of the submit button
-    $('#submitBtn').click(function (e) {
-        // make sure the form is not submitted
-        e.preventDefault();
-        // run the form validations
-        document.getElementById('signInForm').checkValidity();
-        // check if the form is valid
-        if (document.getElementById('signInForm').reportValidity()) {
-            // form is valid, create a post request
-            $.ajax({
-                type: 'post',
-                url: "/loginpage/login",
-                // the user data 
-                data: {
-                    email: $('#email').val(),
-                    passWord: $('#passWord').val()
-                },
-                complete: // this function will run if the request is successful
-                    function (xhr, status) {
-                        // check if there is an error
-                        if (status === 'error'){
-                            alert(xhr.responseText);
-                         }
-                        else
-                            alert(xhr.responseText);
-                    
-                    }
-            });
-        }
-    });
-</script>
+    <script>
+        // listen to click event of the submit button
+        $('#submitBtn').click(function (e) {
+            // make sure the form is not submitted
+            e.preventDefault();
+            // run the form validationsf
+            document.getElementById('myForm').checkValidity();
+            // check if the form is valid
+            if (document.getElementById('myForm').reportValidity()) {
+                // form is valid, create a post request
+                $.ajax({
+                    type: 'post',
+                    url: "/loginpage/login",
+                    // the user data 
+                    data: {
+                        email: $('#login_email').val(),
+                        passWord: $('#login_password').val()
+                    },
+                    complete: // this function will run if the request is successful
+                        function (xhr, status) {
+                            // check if there is an error
+                            if (status === 'error') {
+                                alert(xhr.responseText);
+                            } else
+                                alert(xhr.responseText);
+
+                        }
+                });
+            }
+        });
+    </script>
 
 </html>
