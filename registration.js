@@ -21,10 +21,8 @@ mysql.createPool({
 }).catch((e) => {
     console.error(e);
 });
-console.log('check2');
 
 async function register(req, res) {
-    console.log('check2');
 
     let users = await getUsers();
 
@@ -36,7 +34,7 @@ async function register(req, res) {
         return res.send("הסיסמא אינה תואמת")
     }
     for (let u of users) {
-        if (name === u.name && passWord === u.passWord) {
+        if (name === u.name && passWord === u.passWord && email === u.email) {
             // return 'משתמש קיים!!';
             return res.sendStatus(500);
         }
